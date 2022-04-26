@@ -166,7 +166,7 @@
     "parsingErr": "No error",
     "validationErr": "No error",
     "expected": [
-      "0 | Chain ID : otherhub",
+      "0 | Chain ID : decimal-devnet-08-01",
       "1 | Account : 6571",
       "2 | Sequence : 1",
       "3 | Type : Delegate",

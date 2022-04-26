@@ -1,14 +1,6 @@
-# Ledger Cosmos app
+# Ledger Decimal app
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GithubActions](https://github.com/cosmos/ledger-cosmos/actions/workflows/main.yml/badge.svg)](https://github.com/cosmos/ledger-cosmos/blob/main/.github/workflows/main.yaml)
-
----
-
-![zondax](docs/zondax.jpg)
-
-_Please visit our website at [zondax.ch](zondax.ch)_
-
----
 
 This project contains the Cosmos app for Ledger Nano S and X.
 

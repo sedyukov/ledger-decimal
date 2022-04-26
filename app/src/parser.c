@@ -100,6 +100,34 @@ __Z_INLINE bool_t parser_isAmount(char *key) {
         return bool_true;
     }
 
+    if (strcmp(key, "msgs/value/coin") == 0) {
+        return bool_true;
+    }
+
+    if (strcmp(key, "msgs/value/coin_to_buy") == 0) {
+        return bool_true;
+    }
+
+    if (strcmp(key, "msgs/value/max_coin_to_sell") == 0) {
+        return bool_true;
+    }
+
+    if (strcmp(key, "msgs/value/sends/coin") == 0) {
+        return bool_true;
+    }
+
+    if (strcmp(key, "msgs/value/coin_to_sell") == 0) {
+        return bool_true;
+    }
+
+    if (strcmp(key, "msgs/value/min_coin_to_buy") == 0) {
+        return bool_true;
+    }
+
+    if (strcmp(key, "msgs/value/stake") == 0) {
+        return bool_true;
+    }
+
     return bool_false;
 }
 

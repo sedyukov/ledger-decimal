@@ -141,7 +141,7 @@ namespace {
     }
 
     TEST(TxParse, Tx_Page_Count) {
-        auto transaction = R"({"account_number":"0","chain_id":"test-chain-1","fee":{"amount":[{"amount":"5","denom":"photon"}],"gas":"10000"},"memo":"testmemo","msgs":[{"inputs":[{"address":"cosmosaccaddr1d9h8qat5e4ehc5","coins":[{"amount":"10","denom":"atom"}]}],"outputs":[{"address":"cosmosaccaddr1da6hgur4wse3jx32","coins":[{"amount":"10","denom":"atom"}]}]}],"sequence":"1"})";
+        auto transaction = R"({"account_number":"0","chain_id":"decimal-mainnet-08-01","fee":{"amount":[{"amount":"5","denom":"del"}],"gas":"10000"},"memo":"testmemo","msgs":[{"inputs":[{"address":"dx1z4x4r0ljrkserqrqpn65g98h50mjkc0qxas0ps","coins":[{"amount":"1000","denom":"del"}]}],"outputs":[{"address":"dx1fjfxrtflz6cqa82520awnytkrr43tlnmcc5357","coins":[{"amount":"1000","denom":"del"}]}]}],"sequence":"1"})";
 
         parser_tx_obj.tx = transaction;
         parser_tx_obj.flags.cache_valid = false;
@@ -150,12 +150,12 @@ namespace {
 
         uint8_t numItems;
         tx_display_numItems(&numItems);
-        EXPECT_EQ(10, numItems) << "Wrong number of items";
+        EXPECT_EQ(6, numItems) << "Wrong number of items";
     }
 
     TEST(TxParse, Page_Count_MultipleMsgs) {
         auto transaction =
-                R"({"account_number":"0","chain_id":"test-chain-1","fee":{"amount":[{"amount":"5","denom":"photon"}],"gas":"10000"},"memo":"testmemo","msgs":[{"inputs":[{"address":"cosmosaccaddr1d9h8qat5e4ehc5","coins":[{"amount":"10","denom":"atom"}]}],"outputs":[{"address":"cosmosaccaddr1da6hgur4wse3jx32","coins":[{"amount":"10","denom":"atom"}]}]},{"inputs":[{"address":"cosmosaccaddr1d9h8qat5e4ehc5","coins":[{"amount":"10","denom":"atom"}]}],"outputs":[{"address":"cosmosaccaddr1da6hgur4wse3jx32","coins":[{"amount":"10","denom":"atom"}]}]},{"inputs":[{"address":"cosmosaccaddr1d9h8qat5e4ehc5","coins":[{"amount":"10","denom":"atom"}]}],"outputs":[{"address":"cosmosaccaddr1da6hgur4wse3jx32","coins":[{"amount":"10","denom":"atom"}]}]},{"inputs":[{"address":"cosmosaccaddr1d9h8qat5e4ehc5","coins":[{"amount":"10","denom":"atom"}]}],"outputs":[{"address":"cosmosaccaddr1da6hgur4wse3jx32","coins":[{"amount":"10","denom":"atom"}]}]}],"sequence":"1"})";
+                R"({"account_number":"0","chain_id":"decimal-mainnet-08-01","fee":{"amount":[{"amount":"5","denom":"del"}],"gas":"10000"},"memo":"testmemo","msgs":[{"inputs":[{"address":"dx1z4x4r0ljrkserqrqpn65g98h50mjkc0qxas0ps","coins":[{"amount":"1000","denom":"del"}]}],"outputs":[{"address":"dx1fjfxrtflz6cqa82520awnytkrr43tlnmcc5357","coins":[{"amount":"1000","denom":"del"}]}]},{"inputs":[{"address":"dx1z4x4r0ljrkserqrqpn65g98h50mjkc0qxas0ps","coins":[{"amount":"1000","denom":"del"}]}],"outputs":[{"address":"dx1fjfxrtflz6cqa82520awnytkrr43tlnmcc5357","coins":[{"amount":"1000","denom":"del"}]}]},{"inputs":[{"address":"dx1z4x4r0ljrkserqrqpn65g98h50mjkc0qxas0ps","coins":[{"amount":"1000","denom":"del"}]}],"outputs":[{"address":"dx1fjfxrtflz6cqa82520awnytkrr43tlnmcc5357","coins":[{"amount":"1000","denom":"del"}]}]},{"inputs":[{"address":"dx1z4x4r0ljrkserqrqpn65g98h50mjkc0qxas0ps","coins":[{"amount":"1000","denom":"del"}]}],"outputs":[{"address":"dx1fjfxrtflz6cqa82520awnytkrr43tlnmcc5357","coins":[{"amount":"1000","denom":"del"}]}]}],"sequence":"1"})";
 
         parser_tx_obj.tx = transaction;
         parser_tx_obj.flags.cache_valid = false;
@@ -164,6 +164,6 @@ namespace {
 
         uint8_t numItems;
         tx_display_numItems(&numItems);
-        EXPECT_EQ(22, numItems) << "Wrong number of items";
+        EXPECT_EQ(18, numItems) << "Wrong number of items";
     }
 }

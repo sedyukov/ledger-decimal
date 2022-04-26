@@ -52,15 +52,15 @@ $(info ************ LOGGING ENABLED ************)
 endif
 
 ifndef COIN
-COIN=ATOM
+COIN=DEL
 endif
 
 $(info COIN  = [$(COIN)])
 
-ifeq ($(COIN),ATOM)
+ifeq ($(COIN),DEL)
 # Main app configuration
-APPNAME = "Cosmos"
-APPPATH = "44'/118'"
+APPNAME = "Decimal"
+APPPATH = "44'/60'"
 else
 define error_message
 

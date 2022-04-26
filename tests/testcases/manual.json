@@ -137,7 +137,7 @@
     "name": "delegationDifferentChain",
     "tx": {
       "account_number": "6571",
-      "chain_id": "otherhub",
+      "chain_id": "decimal-devnet-08-01",
       "fee": {
         "amount": [
           {

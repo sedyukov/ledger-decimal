@@ -772,7 +772,7 @@
         ],
         "gas": "200000"
       },
-      "memo": "Crypto",
+      "memo": "Crypton",
       "msgs": [
         {
           "type": "nft/msg_mint",
@@ -802,7 +802,7 @@
       "6 | Reserve : reserve",
       "7 | Sender : dx1z4x4r0ljrkserqrqpn65g98h50mjkc0qxas0",
       "8 | Token uri : token_uri",
-      "9 | Memo : Crypto",
+      "9 | Memo : Crypton",
       "10 | Fee : 0.458000 DEL"
     ],
     "expert": false

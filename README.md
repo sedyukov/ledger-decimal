@@ -117,6 +117,9 @@ Let's go! First install everything:
 
 ```bash
 make zemu_install
+cd tests_zemu/ledger-cosmos-js
+npm i
+npm run build
 ```
 
 Then you can run JS tests:

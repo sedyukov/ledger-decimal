@@ -52,15 +52,15 @@ $(info ************ LOGGING ENABLED ************)
 endif
 
 ifndef COIN
-COIN=ATOM
+COIN=DEL
 endif
 
 $(info COIN  = [$(COIN)])
 
-ifeq ($(COIN),ATOM)
+ifeq ($(COIN),DEL)
 # Main app configuration
-APPNAME = "Cosmos"
-APPPATH = "44'/118'"
+APPNAME = "Decimal"
+APPPATH = "44'/60'"
 else
 define error_message
 
@@ -91,7 +91,7 @@ OUTPUT_INSTALLER:= $(CURDIR)/pkg/installer_x.sh
 endif
 
 ifeq ($(TARGET_NAME),TARGET_NANOS2)
-APP_LOAD_PARAMS += --appFlags 0x200
+APP_LOAD_PARAMS += --appFlags 0x000
 ICONNAME:=$(CURDIR)/nanox_icon.gif
 OUTPUT_ELF ?= $(CURDIR)/output/app_s2.elf
 OUTPUT_INSTALLER:= $(CURDIR)/pkg/installer_s2.sh

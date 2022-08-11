@@ -51,15 +51,45 @@ __Z_INLINE void strcat_chunk_s(char *dst, uint16_t dst_max, const char *src_chun
 ///////////////////////////
 
 static const key_subst_t value_substitutions[] = {
-        {"cosmos-sdk/MsgSend",                        "Send"},
-        {"cosmos-sdk/MsgDelegate",                    "Delegate"},
-        {"cosmos-sdk/MsgUndelegate",                  "Undelegate"},
-        {"cosmos-sdk/MsgBeginRedelegate",             "Redelegate"},
-        {"cosmos-sdk/MsgSubmitProposal",              "Propose"},
-        {"cosmos-sdk/MsgDeposit",                     "Deposit"},
-        {"cosmos-sdk/MsgVote",                        "Vote"},
-        {"cosmos-sdk/MsgWithdrawDelegationReward",    "Withdraw Reward"},
-        {"cosmos-sdk/MsgWithdrawValidatorCommission", "Withdraw Val. Commission"},
+        {"coin/create_coin",                          "Create Coin"},
+        {"coin/update_coin",                          "Update Coin"},
+        {"coin/send_coin",                            "Send"},
+        {"coin/multi_send_coin",                      "Multisend"},
+        {"coin/buy_coin",                             "Buy"},
+        {"coin/sell_coin",                            "Sell"},
+        {"coin/sell_all_coin",                        "Sell All"},
+        {"coin/redeem_check",                         "Redeem Check"},
+
+        {"nft/msg_edit_metadata",                     "Edit NFT"},
+        {"nft/msg_mint",                              "Mint NFT"},
+        {"nft/msg_burn",                              "Burn NFT"},
+        {"nft/msg_transfer",                          "Send NFT"},
+        {"nft/update_reserve",                        "Update NFT Reserve"},
+
+        {"multisig/create_wallet",                    "Create Multisig Wallet"},
+        {"multisig/create_transaction",               "Create Multisig Tx"},
+        {"multisig/sign_transaction",                 "Sign Multisig Tx"},
+
+        {"swap/msg_chain_activate",                   "Activate Chain"},
+        {"swap/msg_chain_deactivate",                 "Deactivate Chain"},
+        {"swap/msg_initialize",                       "Init Swap"},
+        {"swap/msg_redeem",                           "Redeem Swap"},
+        {"swap/msg_redeem_v2",                        "Redeem Swap"},
+        {"swap/msg_refund",                           "Refund Swap"},
+        {"swap/msg_htlt",                             "HTLT Swap"},
+
+        {"validator/declare_candidate",               "Declare Candidate"},
+        {"validator/edit_candidate",                  "Edit Candidate"},
+        {"validator/delegate",                        "Delegate"},
+        {"validator/delegate_nft",                    "Delegate NFT"},
+        {"validator/unbond",                          "Unbond"},
+        {"validator/unbond_nft",                      "Unbond NFT"},
+        {"validator/set_online",                      "Set Validator Online"},
+        {"validator/set_offline",                     "Set Validator Offline"},
+
+        {"cosmos-sdk/MsgSubmitProposal",              "Submit Proposal"},
+        {"cosmos-sdk/MsgVote",                        "Vote Proposal"},
+        {"cosmos-sdk/MsgSoftwareUpgradeProposal",     "Software Update"},
 };
 
 parser_error_t tx_getToken(uint16_t token_index,

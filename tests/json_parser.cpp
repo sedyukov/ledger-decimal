@@ -120,7 +120,7 @@ namespace {
 
     TEST(JsonParserTest, ArrayElementCount_objects) {
         auto transaction =
-                R"({"array":[{"amount":5,"denom":"photon"}, {"amount":5,"denom":"photon"}, {"amount":5,"denom":"photon"}]})";
+                R"({"array":[{"amount":5,"denom":"del"}, {"amount":5,"denom":"del"}, {"amount":5,"denom":"del"}]})";
 
         parsed_json_t parsed_json;
         JSON_PARSE(&parsed_json, transaction);
@@ -164,7 +164,7 @@ namespace {
 
     TEST(JsonParserTest, ArrayElementGet_objects) {
         auto transaction =
-                R"({"array":[{"amount":5,"denom":"photon"}, {"amount":5,"denom":"photon"}, {"amount":5,"denom":"photon"}]})";
+                R"({"array":[{"amount":5,"denom":"del"}, {"amount":5,"denom":"del"}, {"amount":5,"denom":"del"}]})";
 
         parsed_json_t parsed_json;
         JSON_PARSE(&parsed_json, transaction);
@@ -365,7 +365,7 @@ namespace {
 
     TEST(TxValidationTest, ObjectGetValueCorrectFormat) {
         auto transaction =
-                R"({"account_number":"0","chain_id":"test-chain-1","fee":{"amount":[{"amount":"5","denom":"photon"}],"gas":"10000"},"memo":"testmemo","msgs":[{"inputs":[{"address":"cosmosaccaddr1d9h8qat5e4ehc5","coins":[{"amount":"10","denom":"atom"}]}],"outputs":[{"address":"cosmosaccaddr1da6hgur4wse3jx32","coins":[{"amount":"10","denom":"atom"}]}]}],"sequence":"1"})";
+                R"({"account_number":"0","chain_id":"decimal-mainnet-08-01","fee":{"amount":[{"amount":"5","denom":"del"}],"gas":"10000"},"memo":"testmemo","msgs":[{"inputs":[{"address":"dx1z4x4r0ljrkserqrqpn65g98h50mjkc0qxas0ps","coins":[{"amount":"1000","denom":"del"}]}],"outputs":[{"address":"dx1fjfxrtflz6cqa82520awnytkrr43tlnmcc5357","coins":[{"amount":"1000","denom":"del"}]}]}],"sequence":"1"})";
         parsed_json_t parsed_json;
         JSON_PARSE(&parsed_json, transaction);
 

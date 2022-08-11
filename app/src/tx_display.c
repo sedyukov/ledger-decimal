@@ -463,32 +463,77 @@ static const key_subst_t key_substitutions[] = {
         {"fee/payer",                         "Payer"},
         {"msgs/type",                         "Type"},
 
-        {"tip/amount",                        "Tip"},
-        {"tip/tipper",                        "Tipper"},
-
-        {"msgs/inputs/address",               "Source Address"},
-        {"msgs/inputs/coins",                 "Source Coins"},
-        {"msgs/outputs/address",              "Dest Address"},
-        {"msgs/outputs/coins",                "Dest Coins"},
-
         {"msgs/value/from_address",           "From"},
         {"msgs/value/to_address",             "To"},
         {"msgs/value/amount",                 "Amount"},
         {"msgs/value/delegator_address",      "Delegator"},
         {"msgs/value/validator_address",      "Validator"},
-        {"msgs/value/validator_src_address",  "Validator Source"},
-        {"msgs/value/validator_dst_address",  "Validator Dest"},
         {"msgs/value/description",            "Description"},
-        {"msgs/value/initial_deposit/amount", "Deposit Amount"},
-        {"msgs/value/initial_deposit/denom",  "Deposit Denom"},
         {"msgs/value/proposal_type",          "Proposal"},
         {"msgs/value/proposer",               "Proposer"},
         {"msgs/value/title",                  "Title"},
         {"msgs/value/depositer",              "Sender"},
         {"msgs/value/proposal_id",            "Proposal ID"},
         {"msgs/value/amount",                 "Amount"},
-        {"msgs/value/voter",                  "Description"},
+        {"msgs/value/voter",                  "Voter"},
         {"msgs/value/option",                 "Option"},
+
+        {"msgs/value/receiver",               "Receiver"},
+        {"msgs/value/recipient",              "Receiver"},
+        {"msgs/value/sends/receiver",         "Receiver"},
+
+        {"msgs/value/sender",                 "Sender"},
+        {"msgs/value/from",                   "From"},
+
+        {"msgs/value/coin",                   "Amount"},
+        {"msgs/value/proof",                  "Proof"},
+        {"msgs/value/sends",                  "Multisend"},
+
+        {"msgs/value/from_chain",             "From chain"},
+        {"msgs/value/dest_chain",             "Dest chain"},
+
+        {"msgs/value/check",                  "Check"},
+
+        {"msgs/value/token_name",             "Token symbol"},
+        {"msgs/value/token_symbol",           "Token name"},
+
+        {"msgs/value/v",                      "Signature (V)"},
+        {"msgs/value/r",                      "Signature (R)"},
+        {"msgs/value/s",                      "Signature (S)"},
+
+        {"msgs/value/quantity",               "Quantity"},
+        {"msgs/value/reserve",                "Reserve"},
+        {"msgs/value/sub_token_ids",          "SubToken ids"},
+
+        {"msgs/value/coin_to_buy",            "Coin to buy"},
+        {"msgs/value/max_coin_to_sell",       "Max coin to sell"},
+
+        {"msgs/value/constant_reserve_ratio", "Constant reserve ratio"},
+        {"msgs/value/identity",               "Identity"},
+        {"msgs/value/initial_reserve",        "Initial reserve"},
+        {"msgs/value/initial_volume",         "Initial volume"},
+        {"msgs/value/limit_volume",           "Limit volume"},
+        {"msgs/value/symbol",                 "Symbol"},
+
+        {"msgs/value/coin_to_sell",            "Coin to sell"},
+        {"msgs/value/min_coin_to_buy",         "Min coin to buy"},
+
+        {"msgs/value/commission",              "Commission"},
+        {"msgs/value/pub_key",                 "Public key"},
+        {"msgs/value/reward_addr",             "Reward address"},
+        {"msgs/value/stake",                   "Stake"},
+        {"msgs/value/validator_addr",          "Validator address"},
+
+        {"msgs/value/content",                 "Content"},
+        {"msgs/value/voting_end_block",        "Voting end block"},
+        {"msgs/value/voting_start_block",      "Voting start block"},
+
+        {"msgs/value/transaction_number",      "Transaction number"},
+
+        {"msgs/value/allow_mint",      "Allow mint"},
+        {"msgs/value/denom",      "Denom"},
+        {"msgs/value/id",      "Id"},
+        {"msgs/value/token_uri",      "Token uri"},
 };
 
 parser_error_t tx_display_make_friendly() {

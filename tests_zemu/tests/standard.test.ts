@@ -16,7 +16,7 @@
 
 import Zemu from '@zondax/zemu'
 // @ts-ignore
-import CosmosApp from '../ledger-cosmos-js'
+import DecimalApp from 'ledger-decimal-js'
 import { DEFAULT_OPTIONS, DEVICE_MODELS, example_tx_str_basic, example_tx_str_basic2 } from './common'
 
 // @ts-ignore
@@ -117,7 +117,7 @@ describe('Standard', function () {
 
       expect(resp).toHaveProperty('bech32_address')
       expect(resp).toHaveProperty('compressed_pk')
-      
+
       console.log("=====================");
       console.log(resp.bech32_address)
 
